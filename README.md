@@ -18,7 +18,6 @@ Este projeto é uma página de login desenvolvida com React e Tailwind CSS, com 
 
 ## Estrutura do Projeto
 
-- `/public/background.jpg`: Imagem de fundo utilizada na página de login.
 - `App.tsx`: Componente principal que renderiza a página de login.
 - `index.tsx`: Ponto de entrada da aplicação.
 
