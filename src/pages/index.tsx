@@ -2,20 +2,17 @@ import React, { useState } from "react";
 
 const Calculator: React.FC = () => {
   const [input, setInput] = useState<string>("0");
-  const [result, setResult] = useState<string>("0");
 
   const handleButtonClick = (value: string) => {
     if (value === "C") {
       setInput("0");
-      setResult("0");
     } else if (value === "=") {
       try {
         const cleanedInput = input.replace(/^0+/, "") || "0";
         const evalResult = eval(cleanedInput);
-        setResult(String(evalResult));
         setInput(String(evalResult));
       } catch (error) {
-        setResult("Error");
+        setInput("Error");
       }
     } else if (value === "+/-") {
       setInput((prev) => (prev.startsWith("-") ? prev.slice(1) : "-" + prev));
